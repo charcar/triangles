@@ -17,21 +17,22 @@ public class AppTest extends FluentTest {
   @ClassRule
   public static ServerRule server = new ServerRule();
 
-  // @Test
-  // public void rootTest() {
-  //   goTo("http://localhost:4567/");
-  //   assertThat(pageSource()).contains("Square finder");
-  // }
-  //
-  // // what happens after a user submits the form
-  // @Test
-  // public void squareTestIsASquare() {
-  //   goTo("http://localhost:4567/");
-  //   fill("#length").with("5");
-  //   fill("#width").with("5");
-  //   submit(".btn");
-  //   assertThat(pageSource()).contains("Your rectangle is a square");
-  // }
+  @Test
+  public void rootTest() {
+    goTo("http://localhost:4567/");
+    assertThat(pageSource()).contains("Enter three sides");
+  }
+
+  // what happens after a user submits the form
+  @Test
+  public void triangleTestIsEquilateral() {
+    goTo("http://localhost:4567/");
+    fill("#side1").with("5");
+    fill("#side2").with("5");
+    fill("#side3").with("5");
+    submit(".btn");
+    assertThat(pageSource()).contains("Your triangle's side lengths are:");
+  }
   //
   // @Test
   // public void squareTestIsNotASquare() {

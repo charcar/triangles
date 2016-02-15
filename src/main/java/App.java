@@ -9,27 +9,27 @@ public class App {
         staticFileLocation("/public");
         String layout = "templates/layout.vtl";
 
-        // get("/", (request, response) -> {
-        //     HashMap<String, Object> model = new HashMap<String, Object>();
-        //
-        //     model.put("template", "templates/home.vtl");
-        //     return new ModelAndView(model, layout);
-        // }, new VelocityTemplateEngine());
-        //
-        // get("/rectangle", (request, response) -> {
-        //     HashMap<String, Object> model = new HashMap<String, Object>();
-        //
-        //     int length = Integer.parseInt(request.queryParams("length"));
-        //     int width = Integer.parseInt(request.queryParams("width"));
-        //
-        //     Rectangle myRectangle = new Rectangle(length, width);
-        //     model.put("myRectangle", myRectangle);
-        //
-        //     model.put("template", "templates/rectangle.vtl");
-        //     return new ModelAndView(model, layout);
-        // }, new VelocityTemplateEngine());
-        //
+        get("/", (request, response) -> {
+          HashMap<String, Object> model = new HashMap<String, Object>();
 
+          model.put("template", "templates/home.vtl");
+          return new ModelAndView(model, layout);
+        }, new VelocityTemplateEngine());
+
+
+        get("/triangle", (request, response) -> {
+          HashMap<String, Object> model = new HashMap<String, Object>();
+
+          int side1 = Integer.parseInt(request.queryParams("side1"));
+          int side2 = Integer.parseInt(request.queryParams("side2"));
+          int side3 = Integer.parseInt(request.queryParams("side3"));
+
+          Triangle myTriangle = new Triangle(side1, side2, side3);
+          model.put("myTriangle", myTriangle);
+
+          model.put("template", "templates/triangle.vtl");
+          return new ModelAndView(model, layout);
+        }, new VelocityTemplateEngine());
 
     }
 }

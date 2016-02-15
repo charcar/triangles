@@ -1,9 +1,21 @@
-<p><h3>Your rectangles's length is $myRectangle.getLength()</h3></p>
-<p><h3>Your rectangles's width is $myRectangle.getWidth()</h3></p>
+<p><h3>Your triangle's side lengths are: $myTriangle.getSide1(), $myTriangle.getSide2(), $myTriangle.getSide3()</h3></p>
 
-#if ($myRectangle.isSquare())
-  <p><h3>Your rectangle is a square</h3></p>
+
+#if ($myTriangle.isNotTriangle())
+  <p><h3>Your triangle is impossible</h3></p>
+
+#elseif ($myTriangle.isEquilateral())
+  <p><h3>Your triangle is equilateral</h3></p>
+
+#elseif ($myTriangle.isIsosceles())
+  <p><h3>Your triangle is isosceles</h3></p>
+
+#elseif ($myTriangle.isScalene())
+  <p><h3>Your triangle is scalene</h3></p>
+
+
 
 #else
-  <p><h3>Your rectangle isn't a square</h3></p>
+  <p><h3>I'm not sure how you arrived at this error but congratulations!</h3></p>
+
 #end
