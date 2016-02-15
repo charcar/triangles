@@ -32,17 +32,11 @@ public class Triangle {
 
   // (side1 != side2 && side 2 != side3)
   public boolean isScalene() {
-    return ((mSide1 != mSide2) && (mSide2 != mSide3));
+    return ((mSide1 != mSide2) && (mSide2 != mSide3) && (mSide1 != mSide3));
   }
 
   // (side1 + side2 > side3) or (side1 + side3 > side2) or (side2 + side3 > side1)
   public boolean isNotTriangle() {
     return (((mSide1 + mSide2) > mSide3) || ((mSide1 + mSide3) > mSide2) || ((mSide2 + mSide3) > mSide1));
   }
-
-
-  //
-  // public boolean isSquare() {
-  //   return mLength == mWidth;
-  // }
 }
