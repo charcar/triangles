@@ -31,15 +31,36 @@ public class AppTest extends FluentTest {
     fill("#side2").with("5");
     fill("#side3").with("5");
     submit(".btn");
-    assertThat(pageSource()).contains("Your triangle's side lengths are:");
+    assertThat(pageSource()).contains("Your triangle is equilateral");
   }
-  //
-  // @Test
-  // public void squareTestIsNotASquare() {
-  //   goTo("http://localhost:4567/");
-  //   fill("#length").with("5");
-  //   fill("#width").with("7");
-  //   submit(".btn");
-  //   assertThat(pageSource()).contains("Your rectangle isn't a square");
-  // }
+
+  @Test
+  public void triangleTestisScalene() {
+    goTo("http://localhost:4567/");
+    fill("#side1").with("2");
+    fill("#side2").with("3");
+    fill("#side3").with("4");
+    submit(".btn");
+    assertThat(pageSource()).contains("Your triangle is scalene");
+  }
+
+  @Test
+  public void triangleTestisIsosceles() {
+    goTo("http://localhost:4567/");
+    fill("#side1").with("3");
+    fill("#side2").with("3");
+    fill("#side3").with("5");
+    submit(".btn");
+    assertThat(pageSource()).contains("Your triangle is isosceles");
+  }
+
+  @Test
+  public void triangleTestisImpossible() {
+    goTo("http://localhost:4567/");
+    fill("#side1").with("2");
+    fill("#side2").with("2");
+    fill("#side3").with("8");
+    submit(".btn");
+    assertThat(pageSource()).contains("Your triangle is impossible");
+  }
 }
