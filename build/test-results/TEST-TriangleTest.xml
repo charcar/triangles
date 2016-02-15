@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TriangleTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2016-02-15T19:29:56" hostname="epicodus-60.local" time="0.008">
+<testsuite name="TriangleTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2016-02-15T19:33:12" hostname="epicodus-60.local" time="0.001">
   <properties/>
-  <testcase name="newTriangle_instantiatesCorrectly" classname="TriangleTest" time="0.002"/>
-  <testcase name="isIsosceles_whenTwoSidesEqual_true" classname="TriangleTest" time="0.002"/>
+  <testcase name="newTriangle_instantiatesCorrectly" classname="TriangleTest" time="0.0"/>
+  <testcase name="isIsosceles_whenTwoSidesEqual_true" classname="TriangleTest" time="0.0"/>
   <testcase name="isScalene_whenNoSidesEqual_true" classname="TriangleTest" time="0.0"/>
-  <testcase name="isEquilateral_whenAllSidesEqual_true" classname="TriangleTest" time="0.001"/>
-  <testcase name="newTriangle_setsSide1" classname="TriangleTest" time="0.001"/>
+  <testcase name="isEquilateral_whenAllSidesEqual_true" classname="TriangleTest" time="0.0"/>
+  <testcase name="newTriangle_setsSide1" classname="TriangleTest" time="0.0"/>
   <testcase name="newTriangle_setsSide2" classname="TriangleTest" time="0.001"/>
   <testcase name="newTriangle_setsSide3" classname="TriangleTest" time="0.0"/>
   <testcase name="isNotATriangle_whenSumOfTwoSidesIsLessThanLengthOfThird_true" classname="TriangleTest" time="0.0"/>
